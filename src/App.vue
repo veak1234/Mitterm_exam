@@ -1,23 +1,20 @@
 <template>
-  <div class="container mt-4">
+  <div class="container pt-5">
     <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card" v-for="teacher in teachers" :key="teacher.id">
+        <div class="card col-md-3 m-2" v-for="teacher in teachers" :key="teacher.id">
           <img :src="teacher.image" class="card-img-top" alt="teacher Image" />
           <div class="card-body">
             <h5 class="card-title"></h5>
             <p class="card-text">ID: {{ teacher.id }}</p>
             <p class="card-text">Subject: {{ teacher.subject }}</p>
             <p class="card-text">Score: {{ teacher.score }}</p>
-            <p v-if= "teacher.score<=50" style="color:red" >Fail</p>
-            <p v-else style="color:blue">Pass</p>
+            <p v-if="teacher.score <= 50" style="color: red">Fail</p>
+            <p v-else style="color: blue">Pass</p>
           </div>
-        </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: "App",
@@ -55,5 +52,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
